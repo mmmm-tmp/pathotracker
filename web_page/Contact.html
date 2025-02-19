@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>PathoTracker huilab</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="/statics/assets/img/pku.jpg" type="image/x-icon"/>
+	
+	<!-- Fonts and icons -->
+	<script src="/statics/assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Lato:300,400,700,900"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/statics/assets/css/fonts.min.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="/statics/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/statics/assets/css/atlantis.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<!-- Logo Header -->
+			<div class="logo-header" data-background-color="blue">
+				
+				<!-- 注意下面是点击这个图片跳转到index.html，我没有改这一步 -->
+				<!-- href="index.html" ->改为 href="#"  -->
+				<a href="#" class="logo">
+					<img src="/statics/assets/img/beidarenmin.jpg" alt="navbar brand" class="navbar-brand" width="40" height="50">
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+				</button>
+				<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+				<div class="nav-toggle">
+					<button class="btn btn-toggle toggle-sidebar">
+						<i class="icon-menu"></i>
+					</button>
+				</div>
+			</div>
+			<!-- End Logo Header -->
+
+			<!-- Navbar Header -->
+			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+				
+				<div class="container-fluid">
+					<div class="collapse" id="search-nav">
+						<form class="navbar-left navbar-form nav-search mr-md-3">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button type="submit" class="btn btn-search pr-1">
+										<i class="fa fa-search search-icon"></i>
+									</button>
+								</div>
+								<input type="text" placeholder="Search ..." class="form-control">
+							</div>
+						</form>
+					</div>
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+
+					</ul>
+
+				</div>
+			</nav>
+			<!-- End Navbar -->
+		</div>
+
+		<!-- Sidebar -->
+		<div class="sidebar sidebar-style-2">			
+			<div class="sidebar-wrapper scrollbar scrollbar-inner">
+				<div class="sidebar-content">
+					<div class="user">
+						<div class="avatar-sm float-left mr-2">
+							<img src="/statics/assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+						</div>
+						<div class="info">
+							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+								<span>
+									Hizrian
+									<span class="user-level">Administrator</span>
+									<span class="caret"></span>
+								</span>
+							</a>
+							<div class="clearfix"></div>
+
+							<div class="collapse in" id="collapseExample">
+								<ul class="nav">
+									<li>
+										<a href="#profile">
+											<span class="link-collapse">My Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="#edit">
+											<span class="link-collapse">Edit Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="#settings">
+											<span class="link-collapse">Settings</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>-->
+					<ul class="nav nav-primary">
+						<li class="nav-item active">
+							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+								<i class="fas fa-home"></i>
+								<p>Dashboard</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="dashboard">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="/statics/demo1/index.html">
+											<span class="sub-item">Dashboard 1</span>
+										</a>
+									</li>
+									<li>
+										<a href="/statics/demo2/index.html">
+											<span class="sub-item">Dashboard 2</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						-->
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Components</h4>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#base">
+								<i class="fas fa-layer-group"></i>
+								<p>Home</p>
+								<span class="caret"></span>
+							</a>
+							-->
+							<a href="/index/">
+								<i class="fas fa-desktop"></i>
+								<p>Home</p>
+							</a>
+							<div class="collapse" id="base">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="components/avatars.html">
+											<span class="sub-item">Avatars</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/buttons.html">
+											<span class="sub-item">Buttons</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/gridsystem.html">
+											<span class="sub-item">Grid System</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/panels.html">
+											<span class="sub-item">Panels</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/notifications.html">
+											<span class="sub-item">Notifications</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/sweetalert.html">
+											<span class="sub-item">Sweet Alert</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/font-awesome-icons.html">
+											<span class="sub-item">Font Awesome Icons</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/simple-line-icons.html">
+											<span class="sub-item">Simple Line Icons</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/flaticons.html">
+											<span class="sub-item">Flaticons</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/typography.html">
+											<span class="sub-item">Typography</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							-->
+						</li>
+						<li class="nav-item">
+							<a href="/Tutorial/"> 
+								<i class="fas fa-th-list"></i>
+								<p>Tutorial</p>
+							</a>
+							<div class="collapse" id="sidebarLayouts">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="sidebar-style-1.html">
+											<span class="sub-item">Sidebar Style 1</span>
+										</a>
+									</li>
+									<li>
+										<a href="overlay-sidebar.html">
+											<span class="sub-item">Overlay Sidebar</span>
+										</a>
+									</li>
+									<li>
+										<a href="compact-sidebar.html">
+											<span class="sub-item">Compact Sidebar</span>
+										</a>
+									</li>
+									<li>
+										<a href="static-sidebar.html">
+											<span class="sub-item">Static Sidebar</span>
+										</a>
+									</li>
+									<li>
+										<a href="icon-menu.html">
+											<span class="sub-item">Icon Menu</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							-->
+						</li>
+						<li class="nav-item">
+							<a href="/PathoTracker/">
+								<i class="fas fa-pen-square"></i>
+								<p>PathoTracker</p>
+							</a>
+							<div class="collapse" id="forms">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="forms/forms.html">
+											<span class="sub-item">Basic Form</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							-->
+						</li>
+
+						<li class="nav-item">
+							<a href="/phylogenetic_tree/">
+								<i class="fas fa-tree"></i>
+								<p>Phylogenetic tree</p>
+							</a>
+							<div class="collapse" id="tables">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="tables/tables.html">
+											<span class="sub-item">Basic Table</span>
+										</a>
+									</li>
+									<li>
+										<a href="tables/datatables.html">
+											<span class="sub-item">Datatables</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							-->
+						</li>
+
+						<li class="nav-item">
+							<a href="/CRE_network/">
+								<i class="fas fa-table"></i>
+								<p>CRE network</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/Contact/">
+								<i class="fas fa-map-marker-alt"></i>
+								<p>Contact</p>
+							</a>
+						</li>
+						
+						<li class="nav-item">
+							<a href="/About_Contact/">
+								<i class="far fa-chart-bar"></i>
+								<p>About & Contact</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/Disclaimer/">
+								<i class="fas fa-bars"></i>
+								<p>Disclaimer</p>
+							</a>
+							<div class="collapse" id="submenu">
+								<ul class="nav nav-collapse">
+									<li>
+										<a data-toggle="collapse" href="#subnav1">
+											<span class="sub-item">Level 1</span>
+											<span class="caret"></span>
+										</a>
+										<div class="collapse" id="subnav1">
+											<ul class="nav nav-collapse subnav">
+												<li>
+													<a href="#">
+														<span class="sub-item">Level 2</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="sub-item">Level 2</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a data-toggle="collapse" href="#subnav2">
+											<span class="sub-item">Level 1</span>
+											<span class="caret"></span>
+										</a>
+										<div class="collapse" id="subnav2">
+											<ul class="nav nav-collapse subnav">
+												<li>
+													<a href="#">
+														<span class="sub-item">Level 2</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="#">
+											<span class="sub-item">Level 1</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							-->
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidebar -->
+
+		
+		<div class="main-panel">
+			<div class="content">
+				<div class="page-inner">
+					<div class="page-header">
+						<h4 class="page-title">Contact</h4>
+						<ul class="breadcrumbs">
+							<li class="nav-home">
+								<a href="#">
+									<i class="flaticon-home"></i>
+								</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="#">Home</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="#">Contact</a>
+							</li>
+						</ul>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="card">
+								<div class="card-header">
+									<h4 class="card-title">Contact</h4>
+								</div>
+								<div class="card-body">
+									<ul class="nav nav-pills nav-secondary" id="pills-tab" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+										</li>
+									</ul>
+									<div class="tab-content mt-2 mb-3" id="pills-tabContent">
+										<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+											<p>Please let us know your questions, problems and suggestions with PathoTracker, we will contact you shortly. G'day!<br></p>
+											<p>In case of problems and issues with the services contact the helpdesk 
+											<a href="mailto: sywangry@foxmail.com"><small>sywangry@foxmail.com</small></a><br><br>
+												If you wish to know more about who we are and our research, see <a href="https://www.wanghuilab.net">our research group pages</a><br><br>
+												Department of Clinical Laboratory, Peking University People's Hospital, Beijing, China.</p>
+
+											
+										</div>
+										<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+											<p>xxx
+											</p>
+										</div>
+										<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+											<p>xxx</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.pkuph.cn/">
+									pkuph
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.pku.edu.cn/">
+									pku
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.bjmu.edu.cn/">
+									bjmu
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="copyright ml-auto">
+						Copyright 2022 Huilab All Rights Reserved.
+						<br>
+						Department of Clinical Laboratory<br>Peking University People's Hospital, Beijing, China.
+						<br>
+						<!--<i class="fa fa-heart heart text-danger"></i>-->
+						by <a href="https://www.wanghuilab.net"> Huilab </a>
+					</div>				
+				</div>
+			</footer>
+		</div>
+		
+		
+	</div>
+	
+	<!--   Core JS Files   -->
+	<script src="/statics/assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="/statics/assets/js/core/popper.min.js"></script>
+	<script src="/statics/assets/js/core/bootstrap.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="/statics/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="/statics/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	
+	<!-- jQuery Scrollbar -->
+	<script src="/statics/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<!-- Atlantis JS -->
+	<script src="/statics/assets/js/atlantis.min.js"></script>
+</body>
+</html>

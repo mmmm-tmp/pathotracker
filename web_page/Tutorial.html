@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>PathoTracker huilab</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="/statics/assets/img/pku.jpg" type="image/x-icon"/>
+	
+	<!-- Fonts and icons -->
+	<script src="/statics/assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Lato:300,400,700,900"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/statics/assets/css/fonts.min.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="/statics/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/statics/assets/css/atlantis.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<!-- Logo Header -->
+			<div class="logo-header" data-background-color="blue">
+				
+				<!--  -->
+				<!-- href="index.html" ->改为 href="#"  -->
+				<a href="#" class="logo">
+					<img src="/statics/assets/img/beidarenmin.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
+					<img src="/statics/assets/img/pku.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+				</button>
+				<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+				<div class="nav-toggle">
+					<button class="btn btn-toggle toggle-sidebar">
+						<i class="icon-menu"></i>
+					</button>
+				</div>
+			</div>
+			<!-- End Logo Header -->
+
+			<!-- Navbar Header -->
+			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+				
+				<div class="container-fluid">
+					<span class="text-white fw-bold col-xl-4 ml-auto mr-auto" style="font-size:20px">PathoTracker</span>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+		</div>
+
+		<!-- Sidebar -->
+		<div class="sidebar sidebar-style-2">			
+			<div class="sidebar-wrapper scrollbar scrollbar-inner">
+				<div class="sidebar-content">
+					<ul class="nav nav-primary">
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Components</h4>
+						</li>
+						<li class="nav-item">
+							<a href="/index/">
+								<i class="fas fa-desktop"></i>
+								<p>Home</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/Tutorial/">
+								<i class="fas fa-th-list"></i>
+								<p>Tutorial</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/PathoTracker/">
+								<i class="fas fa-pen-square"></i>
+								<p>PathoTracker</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="/PathoTracker_ST11/">
+								<i class="fas fa-pen-square"></i>
+								<p>PathoTracker (ST11)</p>
+							</a>
+							
+						</li>
+
+						<li class="nav-item">
+							<a href="/species/">
+								<i class="fas fa-chart-bar"></i>
+								<p>Species detection</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="/phylogenetic_tree/">
+								<i class="fas fa-tree"></i>
+								<p>Phylogenetic tree</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="/CRE_network/">
+								<i class="fas fa-table"></i>
+								<p>CRE network</p>
+							</a>
+						</li>
+
+						
+						<li class="nav-item">
+							<a href="/About_Contact/">
+								<i class="fab fa-telegram"></i>
+								<p>About & Contact</p>
+							</a>
+						</li>
+						
+						<li class="nav-item">
+							<a href="/Disclaimer/">
+								<i class="fas fa-bars"></i>
+								<p>Disclaimer</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidebar -->
+
+		
+		<div class="main-panel">
+			<div class="content">
+				<div class="page-inner">
+					<div class="page-header">
+						<h4 class="page-title">Tutorial</h4>
+						<ul class="breadcrumbs">
+							<li class="nav-home">
+								<a href="#">
+									<i class="flaticon-home"></i>
+								</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="#">Home</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="#">Tutorial</a>
+							</li>
+						</ul>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="card">
+								<div class="card-header">
+									<h4 class="card-title">Tutorial</h4>
+								</div>
+								<div class="card-body">
+									<ul class="nav nav-pills nav-secondary" id="pills-tab" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active" id="tutorial_PathoTracker-tab" data-toggle="pill" href="#tutorial_PathoTracker" role="tab" aria-controls="tutorial_PathoTracker" aria-selected="true">PathoTracker</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="tutorial_species_detection-tab" data-toggle="pill" href="#tutorial_species_detection" role="tab" aria-controls="tutorial_species_detection" aria-selected="false">Species detection</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="tutorial_phylogentic_tree-tab" data-toggle="pill" href="#tutorial_phylogentic_tree" role="tab" aria-controls="tutorial_phylogentic_tree" aria-selected="false">Phylogentic tree</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="Statement-tab" data-toggle="pill" href="#Statement" role="tab" aria-controls="Statement" aria-selected="false">Statement</a>
+										</li>
+									</ul>
+									<div class="tab-content mt-2 mb-3" id="pills-tabContent">
+										<div class="tab-pane fade show active" id="tutorial_PathoTracker" role="tabpanel" aria-labelledby="tutorial_species_detection-tab">
+											<div class="row">
+											<div class="col">
+												
+												
+												<!--<div class="card">
+													<div class="card-body">
+													<div class="tab-content mt-2 mb-3" id="summary_PathoTracker">
+														<div class="tab-pane fade show active" id="summary_PathoTracker_body" role="tabpanel" aria-labelledby="tutorial_PathoTracker-tab">
+															<p>PathoTracker enables Klebsiella pneumoniae feature identification.
+														</div>
+													</div>
+													</div>
+												</div>-->
+												
+												
+												
+												<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Database Introduction</h4>
+													</div>
+													<div class="card-body">
+														<ul class="nav nav-pills nav-secondary" id="pills-tab1" role="tablist">
+															<li class="nav-item">
+																<a class="nav-link active" id="cre_intro-tab" data-toggle="pill" href="#cre_intro" role="tab" aria-controls="cre_intro" aria-selected="true">CRE Network</a>
+															</li>
+															<li class="nav-item">
+																<a class="nav-link" id="pubdb_intro-tab" data-toggle="pill" href="#pubdb_intro" role="tab" aria-controls="pubdb_intro" aria-selected="false">Isolate form public datasets</a>
+															</li>
+															<li class="nav-item">
+																<a class="nav-link" id="vir_res_db_intro-tab" data-toggle="pill" href="#vir_res_db_intro" role="tab" aria-controls="vir_res_db_intro" aria-selected="false">Virulence and antimicrobial genes database</a>
+															</li>
+														</ul>
+														<div class="tab-content mt-2 mb-3" id="pills-tabContent1">
+															<div class="tab-pane fade show active" id="cre_intro" role="tabpanel" aria-labelledby="cre_intro-tab">
+																<p>Our research group established a Carbapenem-resistant <i>Enterobacteriaceae</i> (CRE) network to investigate the epidemiology of CRE in China starting from 2014.<br>
+																	There were 2 stages to this study: first, from 2012 to 2013, we collected 150 CRE isolates from 16 tertiary hospitals, and second, starting in 2014, we expanded the collection area. <br>
+																	The number of participating hospitals increased from 25 in 2014 to 65 in 2016. <br>
+																	Peking University People’s Hospital was the lead unit in this project and was responsible for the collection, identification, and sorting of isolates.</p>
+																<p></p>
+															</div>
+															<div class="tab-pane fade" id="pubdb_intro" role="tabpanel" aria-labelledby="pubdb_intro-tab">
+																<p>We downloaded 846 <i>Klebsiella pneumoniae</i> isolates form refseq database, did the kleborate type, and incorporated them into this database</p>
+																<p></p>
+															</div>
+															<div class="tab-pane fade" id="vir_res_db_intro" role="tabpanel" aria-labelledby="vir_res_db_intro-tab">
+																<p>
+																	After comparing with the strains in this database, we will output the virulence genes and antimicrobial genes carried by
+																	the strains closest to the isolate. However, since the isolate itself may carry different virulence or antimicrobial genes
+																	from the strains in the database, for example, a antimicrobial plasmid is obtained.
+																</p>
+																<p>
+																	For the sake of insurance, this
+																	database will also compare the submitted data with the VFDB database and the resfinder database, and output the virulence
+																	genes and antimicrobial genes of the isolate sequence for comparison.<br>
+																	If it is a nosocomial outbreak, the evolution of the strain
+																	can be briefly viewed from this.
+																</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												
+												<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Webserver Introduction</h4>
+													</div>
+												<div class="card-body">
+													<div class="tab-content mt-2 mb-3" id="Webserver_PathoTracker">
+														<div class="tab-pane fade show active" id="Webserver_PathoTracker_body" role="tabpanel" aria-labelledby="tutorial_PathoTracker-tab">
+											<!--<h5 class="card-title">Limit parameters for comparsion</h5>-->
+								
+																			<p>The purpose of PathoTracker is to solve how to find the isolate closest to the newly sequencing data
+																				and timely detect the outbreak of the isolates in the large database.<br></p>
+																			<p>If the sequencing samples to be detected in the same area over a period of time, by comparing with the
+																				PathoTracker, the results of the output neighboring isolates are similar (here, the closest isolates
+																				are basically the same with sample), the output virulence genes and antibiotic resistance genes are
+																				basically the same, and it can be considered that there may have an isolate outbreak.<br></p>
+																			<p>At the same time, this service can also trace the source of samples and the geographical and phylogenetic
+																				evolution. In particular, PathoTracker incorporates not only isolates from China but also isolates submitted
+																				worldwide in public databases, at which point its possible to trace the evolution of isolates in both
+																				spatial as well as temporal dimensions.<br></p>
+																			<p>PathoTracker relies on CRE network. For all the self-collected isolates, we measured the minimum inhibitory
+																				concentration (MIC) of the <b><span style="text-decoration:underline;color: #f00;">23</span></b> antimicrobials by utilizing broth microdilution method.<br><br>
+																				The <b><span style="text-decoration:underline;color: #f00;">23</span></b> antimicrobials were as follows:<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;meropenem (MEM), imipenem (IMP), ertapenem (ETP), cefoxitin (FOX), cefepime (FEP),<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ceftazidime (CAZ) ,ceftazidime/avibactam (CAZ‑AVI), ceftazidime/clavulanic acid (CLC), cefotaxime (CTX),<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ceftriaxone (CRO), Cefoperazone/sulbactam (CSL), Piperacillin/tazobactam (TZP), amikacin (AMK), ciprofloxacin (CIP),<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;levofloxacin (LVX), meromycin (MIN), colistin (COL), tigecycline (TGC), chloramphenicol (CHL),<br>
+																				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fosfomycin (FOS), aztreonam (ATM), aztreonam/avibactam (ATM-AVI), cefotaxime/clavulanic acid (CTC)<br>
+																			</p>
+																			<p>The advantage of this service is the ability to report genomic and susceptibility information for isolates close
+																				to the sample. Such that the clinic is capable for dramatically reducing the time required for pure culture, give patients
+																				timely precise medication, symptomatic treatment, rescue patients at risk, and restrain abuse of antibiotics, based on
+																				genomic information and self-collected susceptibility information from PathoTracker service report.</p>
+
+															</div>
+														</div>
+													</div>
+												</div>
+											
+											
+												<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Example file format and email address</h4>
+													</div>
+												<div class="card-body">
+													<div class="tab-content mt-2 mb-3" id="examplefile_and_email">
+														<div class="tab-pane fade show active" id="examplefile_and_email_body" role="tabpanel" aria-labelledby="tutorial_PathoTracker-tab">
+											<!--<h5 class="card-title">Limit parameters for comparsion</h5>-->
+															<p>For preassembled partial, complete genomes, the input sequence must be in FASTA format.<br>
+																&nbsp;&nbsp;&nbsp;&nbsp;The allowed alphabet (not case sensitive) is the following:<br>
+ 																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For DNA sequences: A C G T and N (unknown)</p>
+															<!--<p>If your input consists of unassembled sequence reads, the ResFinder web-server will support the following technologies:<br>
+																&nbsp;&nbsp;&nbsp;&nbsp;Nanopore or Pacbio - single end reads<br>
+																&nbsp;&nbsp;&nbsp;&nbsp;Illumina Solexa - paired end reads</p>-->
+															<p>PathoTracker is only available for <span style="text-decoration:underline;color: #f00;"><i>Klebsiella pneumoniae</i></span> right now. More pathogens will be added..</p>
+
+															<p>Click <b><span style="text-decoration:underline;color: #090;">Example sequence format</span></b> to download sample file and view the format</p>
+															<img class="img-responsive center-block" src="/statics/assets/img/tutorial_top.jpg" alt="Select_threshold" >
+															<p><br>Please make sure you fill in the <b><span style="text-decoration:underline;color: #f00;">correct email address</span></b>,
+															the software will take some time to run, we will send the result file to your email.</p>
+														</div>
+													</div>
+												</div>
+												</div>
+
+												<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Limit parameters for comparsion</h4>
+													</div>
+													<div class="card-body">
+														<div class="tab-content mt-2 mb-3" id="limit_parameters">
+															<div class="tab-pane fade show active" id="limit_parameters_body" role="tabpanel" aria-labelledby="tutorial_PathoTracker-tab">
+																<!--<h5 class="card-title">Limit parameters for comparsion</h5>-->
+																<p>All of the following parameters are the limits you wish to set when comparing with public database data<br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;You can choose threshold for minimum % identity (virulence genes)<br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;You can choose threshold for minimum % coverage (virulence genes)<br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;You can choose threshold for minimum % identity (antimicrobial genes)<br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;You can choose threshold for minimum % coverage (antimicrobial genes)<br></p>
+
+																<p>For each limitation, You can choose 100% 90% 80% 60% level</p>
+
+																<div class="row">
+																	<div class="col-md-6">
+																		<img class="img-responsive center-block" src="/statics/assets/img/tutorial_select_threshold.jpg" alt="Select_threshold" >
+																	</div>
+																	<div class="col-md-6">
+																		<img class="img-responsive center-block" src="/statics/assets/img/tutorial_threshold_limitation.jpg" alt="Select_threshold" >
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Submit data type</h4>
+													</div>
+													<div class="card-body">
+														<div class="tab-content mt-2 mb-3" id="submit_data_type">
+															<div class="tab-pane fade show active" id="submit_data_type_body" role="tabpanel" aria-labelledby="tutorial_PathoTracker-tab">
+																<!--<h5 class="card-title">Limit parameters for comparsion</h5>-->
+																<p>Please select the type of data to submit</p>
+																<p>For metagenomic data type: <br> &nbsp;&nbsp;&nbsp;&nbsp; fasta format is support<br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;Only <b><span style="text-decoration:underline;color: #f00;">1</span></b> fasta file can be uploaded
+																</p>
+																<p>For unassembled TGS sequencing reads <br>
+																	<!--&nbsp;&nbsp;&nbsp;&nbsp;If "Metagenomic next-generation sequencing (TGS)" or "Culture isolate (TGS)" is chosen:<br>-->
+																	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We recommend use "seqtk seq -A filename-kpn-nouniq.fq > filename.fasta" to get fasta<br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Only <b><span style="text-decoration:underline;color: #f00;">1</span></b> fasta file can be uploaded<br>
+																	If "Culture isolate (NGS)" is chosen:<br>
+																	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Only <b><span style="text-decoration:underline;color: #f00;">1</span></b> assembled fasta file can be uploaded<br>
+																</p>
+																<p></p>
+																<img class="img-responsive center-block" src="/statics/assets/img/tutorial_select_datatype.jpg" alt="Select_dadatype1" >
+																<img class="img-responsive center-block" src="/statics/assets/img/tutorial_submit_datatype2.jpg" alt="Select_dadatype2" >
+
+																<!--<p><br><br>
+																	If 2 fastq file will be uploaded, please select <b><span style="text-decoration:underline;color: #090;">all two files</span></b> at the same time before uploading them
+																</p>
+
+																<div class="row">
+																	<div class="col" style="padding-right:0px;position:right;">
+																		<img class="img-responsive center-block" src="/statics/assets/img/tutorial_submit_datatype3.jpg" alt="Select_dadatype3" >
+																	</div>
+																	<div class="col" style="padding-left:0px;position:left;">
+																		<img class="img-responsive center-block" src="/statics/assets/img/tutorial_submit_datatype4.jpg" alt="Select_dadatype4" >
+																	</div>
+																</div>-->
+
+																<p><br><b>
+																	For mNGS raw data (fastq), we will provide clean the data, remove its human reads in the future.
+																	</b>
+																	<b>
+																	For NGS raw data (fastq), we will provide clean the data, sequence assembly in the future.
+																	</b>
+																</p>
+
+																<p>
+																	We strongly recommend that for Metagenomic next-generation sequencing (TGS) data, it is better to have the reads of
+																	 <i>Klebsiella pneumoniae</i> greater than about 1000. The results report will show how many reads <i>Klebsiella pneumoniae</i> has. <br>
+																	<b><span style="text-decoration:underline;color: #090;">The more reads, the more accurate the results will be.
+																	</span></b>
+																</p>
+
+																<!--<p><br>
+																	For Culture isolate (NGS) (fastq), we provide and first clean and assemble the data
+																</p>-->
+
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Result</h4>
+													</div>
+													<div class="card-body">
+														<div class="tab-content mt-2 mb-3" id="PathoTracker_result">
+															<div class="tab-pane fade show active" id="PathoTracker_result_body" role="tabpanel" aria-labelledby="tutorial_PathoTracker-tab">
+																<p>
+
+																	The results of the PathoTracker will be sent to you by email.<br>
+																	Since it <b><span style="text-decoration:underline;color: #0000FF;">takes time</span></b> to generate the result,
+																	please make sure you <b><span style="text-decoration:underline;color: #FF0000;">fill in your email address correctly</span></b> so that we can send you the results.<br>
+																	The results of the PathoTracker will also be displayed on the results page.
+																</p>
+
+																<div class="col">
+																	<p><!--<b><span style="text-decoration:underline;color: #090;">
+																	For mNGS raw data (fastq), we provide and first clean the data, remove its human origin and detect species, then extract Klebsiella pneumoniae sequence
+																	</span></b>-->
+																	<br>
+																		The reads matching results will be sent to your email<br>
+																	</p>
+																	<img class="img-responsive center-block" src="/statics/assets/img/tutorial_PathoTracker_result1_new.jpg" alt="PathoTracker_result1" >
+																	<p><br>The result of PathoTracker</p>
+																	<img class="img-responsive center-block" src="/statics/assets/img/tutorial_PathoTracker_result2_new.jpg" alt="PathoTracker_result2" >
+																	<img class="img-responsive center-block" src="/statics/assets/img/tutorial_PathoTracker_result3_new.jpg" alt="PathoTracker_result3" >
+																	<p><br>The result of sequences comparing with resfinder database and VFDB database</p>
+																	<img class="img-responsive center-block" src="/statics/assets/img/tutorial_PathoTracker_result4_new.jpg" alt="PathoTracker_result4" >
+																	<img class="img-responsive center-block" src="/statics/assets/img/tutorial_PathoTracker_result5_new.jpg" alt="PathoTracker_result5" >
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												
+											</div>
+										</div>
+										</div>
+										<div class="tab-pane fade" id="tutorial_species_detection" role="tabpanel" aria-labelledby="tutorial_species_detection-tab">
+											<div class="row">
+											<div class="col">
+											
+											
+												<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Webserver Introduction</h4>
+													</div>
+													<div class="card-body">
+													<div class="tab-content mt-2 mb-3" id="summary_species_detection">
+														<div class="tab-pane fade show active" id="summary_species_detection_body" role="tabpanel" aria-labelledby="tutorial_species_detection-tab">
+															<p>Species detection can achieve online species detection through Centrifuge <a href="https://doi.org/10.1101/gr.210641.116"><i class="icon-book-open"></i></a> .<br>
+														</div>
+													</div>
+													</div>
+												</div>
+											
+											
+												<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Submission</h4>
+													</div>
+													<div class="card-body">
+														<div class="tab-content mt-2 mb-3" id="Submission">
+															<div class="tab-pane fade show active" id="Submission_body" role="tabpanel" aria-labelledby="tutorial_species_detection-tab">
+												<!--<h5 class="card-title">Limit parameters for comparsion</h5>-->
+																<p>The data type should be:<br>
+																&nbsp;&nbsp;&nbsp;&nbsp;Metagenomic next-generation sequencing Third generation sequencing(TGS) remove host background<br>
+																</p>
+
+																<p>Click <b><span style="text-decoration:underline;color: #090;">Example sequence format</span></b> to download sample file and view the format</p>
+																<img class="img-responsive center-block" src="/statics/assets/img/tutorial_submit_data_species.jpg" alt="Select_threshold" >
+																<p><br>Please make sure you fill in the <b><span style="text-decoration:underline;color: #f00;">correct email address</span></b>,
+																the software will take some time to run, we will send the result file to your email.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Result</h4>
+													</div>
+													<div class="card-body">
+														<div class="tab-content mt-2 mb-3" id="species_detection_result">
+															<div class="tab-pane fade show active" id="species_detection_body" role="tabpanel" aria-labelledby="tutorial_species_detection-tab">
+																<p>
+
+																	The results of the PathoTracker will be sent to you by email.<br>
+																	Since it <b><span style="text-decoration:underline;color: #0000FF;">takes time</span></b> to generate the result,
+																	please make sure you <b><span style="text-decoration:underline;color: #FF0000;">fill in your email address correctly</span></b> so that we can send you the results.<br>
+																	The results of the PathoTracker will also be displayed on the results page.
+																</p>
+
+																<div class="col">
+																	<p><b><span style="text-decoration:underline;color: #090;">
+																	We clean the data, remove its human origin and detect species
+																	</span></b>
+																	<br>
+																		The reads matching results will be sent to your email<br>
+																	</p>
+																	<img class="img-responsive center-block" src="/statics/assets/img/tutorial_PathoTracker_result1_new.jpg" alt="PathoTracker_result1" >
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												
+											</div>
+										</div>
+										</div>
+										<div class="tab-pane fade" id="tutorial_phylogentic_tree" role="tabpanel" aria-labelledby="tutorial_phylogentic_tree-tab">
+										
+											
+											<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Webserver Introduction</h4>
+													</div>
+													<div class="card-body">
+													<div class="tab-content mt-2 mb-3" id="summary_phylogentic_tree">
+														<div class="tab-pane fade show active" id="summary_phylogentic_tree_body" role="tabpanel" aria-labelledby="tutorial_phylogentic_tree-tab">
+															<p>Phylogenetic tree enables uploading assembled sequencing data, 
+															constructing the core genome of these sequences through Roary <a href="http://bioinformatics.oxfordjournals.org/content/31/22/3691"><i class="icon-book-open"></i></a> , 
+															and building phylogenetic tree of the core genome through iqtree2 <a href="https://doi.org/10.1093/molbev/msaa015"><i class="icon-book-open"></i></a> .<br><br>
+															
+															
+															<p>Isolate sequences will be annotated using Prokka<br>
+															Roary will be used to calculate the core genome for phylogenetic analysis, which takes annotated assemblies in GFF3 format (produced by Prokka)<br>
+															Iqtree2 will be used to infer phylogenetic trees by maximum likelihood in core genome alignment</p>
+															<br>
+															<p>Since the isolate genome is large magnitude, so it takes a long time to obtain the genome sequence for
+																constructing the phylogenetic tree by conventional mapping and find SNP or MEGA,
+																PathoTracker uses Roary to extract the core genome.</p>
+														</div>
+													</div>
+													</div>
+											</div>
+											
+											
+											<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Example file format and email address</h4>
+													</div>
+												<div class="card-body">
+													<div class="tab-content mt-2 mb-3" id="examplefile_and_email_tree">
+														<div class="tab-pane fade show active" id="examplefile_and_email_tree_body" role="tabpanel" aria-labelledby="tutorial_phylogentic_tree-tab">
+											<!--<h5 class="card-title">Limit parameters for comparsion</h5>-->
+															<p>For preassembled partial, complete genomes, the input sequence must be in FASTA format.<br>
+																&nbsp;&nbsp;&nbsp;&nbsp;The allowed alphabet (not case sensitive) is the following:<br>
+ 																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For DNA sequences: A C G T and N (unknown)</p>
+
+															<p>Click <b><span style="text-decoration:underline;color: #090;">Example sequence format</span></b> to download sample file and view the format</p>
+
+															<p>Please make sure you fill in the <b><span style="text-decoration:underline;color: #f00;">correct email address</span></b>,
+															the software will take some time to run, we will send the result file to your email.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="card">
+												<div class="card-header">
+													<h4 class="card-title">Tree number</h4>
+												</div>
+												<div class="card-body">
+													<div class="tab-content mt-2 mb-3" id="tutorial_tree_number">
+														<div class="tab-pane fade show active" id="tutorial_tree_number_body" role="tabpanel" aria-labelledby="tutorial_phylogentic_tree-tab">
+															<!--<h5 class="card-title">Limit parameters for comparsion</h5>-->
+															<p>Phylogenetic trees require a minimum of <b><span style="text-decoration:underline;color: #f00;">4</span></b> sequences,
+																and this webserver currently can handle a maximum of 6 sequences<br>
+															</p>
+
+															<!--<img class="img-responsive center-block" src="/statics/assets/img/tutorial_tree_number.jpg" alt="Select_country" >-->
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Submit data type</h4>
+													</div>
+													<div class="card-body">
+														<div class="tab-content mt-2 mb-3" id="submit_data_type_tree">
+															<div class="tab-pane fade show active" id="submit_data_type_tree_body" role="tabpanel" aria-labelledby="tutorial_phylogentic_tree-tab">
+
+																<p>
+																	Please select <b><span style="text-decoration:underline;color: #090;">all fasta files</span></b> at the same time before uploading them
+																</p>
+
+																<div class="row">
+																	<div class="col" style="padding-right:0px;position:right;">
+																		<img class="img-responsive center-block" src="/statics/assets/img/tutorial_submit_data_tree.jpg" alt="submit_data_tree" >
+																	</div>
+
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</div>
+
+											<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Tree result</h4>
+													</div>
+													<div class="card-body">
+														<div class="tab-content mt-2 mb-3" id="tutorial_tree_result">
+															<div class="tab-pane fade show active" id="tutorial_tree_result_body" role="tabpanel" aria-labelledby="tutorial_phylogentic_tree-tab">
+
+																<p>
+
+																	The results of the phylogenetic tree construction will be sent to you by email.<br>
+																	Since it <b><span style="text-decoration:underline;color: #0000FF;">takes time</span></b> to generate the phylogenetic tree,
+																	please make sure you <b><span style="text-decoration:underline;color: #FF0000;">fill in your email address correctly</span></b> so that we can send you the results.<br>
+																	The results of the phylogenetic tree will also be displayed on the results page.
+																</p>
+
+																<div class="row">
+																	<div class="col" style="padding-right:0px;position:right;">
+																		<img class="img-responsive center-block" src="/statics/assets/img/tutorial_tree_result.jpg" alt="tree_result" >
+																	</div>
+
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</div>
+
+
+										</div>
+										<div class="tab-pane fade" id="Statement" role="tabpanel" aria-labelledby="Statement-tab">
+											<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">Statement</h4>
+													</div>
+													<div class="card-body">
+														<div class="tab-content mt-2 mb-3" id="Statement">
+															<div class="tab-pane fade show active" id="Statement_body" role="tabpanel" aria-labelledby="tutorial_PathoTracker-tab">
+																<!--<h5 class="card-title">Limit parameters for comparsion</h5>-->
+																<p>We welcome you to join the CRE network. If you do not want to keep your data in the database after using this database, please tick "Do not keep data" when submitting the data, and we will delete the data after the data analysis is completed.</p>
+																<p>If you would like to keep your data and join us, please select <b><span style="text-decoration:underline;color: #f00;">yes</span></b></p>
+																<p>If you select yes, the city is <b><span style="text-decoration:underline;color: #f00;">mandatory</span></b></p>
+																<!--<img class="img-responsive center-block" src="/statics/assets/img/tutorial_submit_datatype.jpg" alt="Select_threshold" >-->
+																<img class="img-responsive center-block" src="/statics/assets/img/tutorial_save_data.jpg" alt="Select_save_data" >
+
+																<p><br>
+																	We recommend that you use <b><span style="text-decoration:underline;color: #0000FF;">Chrome, Safari, Firefox, 360 browsers</span></b> to successfully select your country.
+																	If you would like to join us but do not have one of these browsers, please do not hesitate to contact us by email, thank you.
+																</p>
+																<img class="img-responsive center-block" src="/statics/assets/img/tutorial_country_select.jpg" alt="Select_country" >
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.pkuph.cn/">
+									pkuph
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.pku.edu.cn/">
+									pku
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.bjmu.edu.cn/">
+									bjmu
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.wanghuilab.net">
+									huilab
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="copyright ml-auto">
+						Copyright 2023 Huilab, Department of Clinical Laboratory<br>Peking University People's Hospital, Beijing, China.
+						<br>
+						<!--<i class="fa fa-heart heart text-danger"></i>
+						by <a href="https://www.wanghuilab.net"> Huilab </a>-->
+					</div>				
+				</div>
+			</footer>
+		</div>
+		
+	</div>
+	
+	<!--   Core JS Files   -->
+	<script src="/statics/assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="/statics/assets/js/core/popper.min.js"></script>
+	<script src="/statics/assets/js/core/bootstrap.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="/statics/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="/statics/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	
+	<!-- jQuery Scrollbar -->
+	<script src="/statics/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<!-- Atlantis JS -->
+	<script src="/statics/assets/js/atlantis.min.js"></script>
+
+</body>
+</html>

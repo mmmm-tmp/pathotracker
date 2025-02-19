@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>PathoTracker huilab</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="/statics/assets/img/pku.jpg" type="image/x-icon"/>
+	
+	<!-- Fonts and icons -->
+	<script src="/statics/assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Lato:300,400,700,900"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/statics/assets/css/fonts.min.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="/statics/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/statics/assets/css/atlantis.min.css">
+	<link rel="stylesheet" href="/statics/assets/css/bootstrap-select.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<!-- Logo Header -->
+			<div class="logo-header" data-background-color="blue">
+				
+				<!--  -->
+				<!-- href="index.html" ->改为 href="#"  -->
+				<a href="#" class="logo">
+					<img src="/statics/assets/img/beidarenmin.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
+					<img src="/statics/assets/img/pku.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+				</button>
+				<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+				<div class="nav-toggle">
+					<button class="btn btn-toggle toggle-sidebar">
+						<i class="icon-menu"></i>
+					</button>
+				</div>
+			</div>
+			<!-- End Logo Header -->
+
+			<!-- Navbar Header -->
+			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+				
+				<div class="container-fluid">
+					
+					<span class="text-white fw-bold col-xl-4 ml-auto mr-auto" style="font-size:20px">PathoTracker</span>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+		</div>
+
+		<!-- Sidebar -->
+		<div class="sidebar sidebar-style-2">			
+			<div class="sidebar-wrapper scrollbar scrollbar-inner">
+				<div class="sidebar-content">
+					<ul class="nav nav-primary">
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Components</h4>
+						</li>
+						<li class="nav-item">
+							<a href="/index/">
+								<i class="fas fa-desktop"></i>
+								<p>Home</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/Tutorial/">
+								<i class="fas fa-th-list"></i>
+								<p>Tutorial</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/PathoTracker/">
+								<i class="fas fa-pen-square"></i>
+								<p>PathoTracker</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="/PathoTracker_ST11/">
+								<i class="fas fa-pen-square"></i>
+								<p>PathoTracker (ST11)</p>
+							</a>
+							
+						</li>
+
+						<li class="nav-item">
+							<a href="/species/">
+								<i class="fas fa-chart-bar"></i>
+								<p>Species detection</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="/phylogenetic_tree/">
+								<i class="fas fa-tree"></i>
+								<p>Phylogenetic tree</p>
+							</a>
+						</li>
+
+
+						<li class="nav-item">
+							<a href="/CRE_network/">
+								<i class="fas fa-table"></i>
+								<p>CRE network</p>
+							</a>
+						</li>
+
+						
+						<li class="nav-item">
+							<a href="/About_Contact/">
+								<i class="fab fa-telegram"></i>
+								<p>About & Contact</p>
+							</a>
+						</li>
+						
+						<li class="nav-item">
+							<a href="/Disclaimer/">
+								<i class="fas fa-bars"></i>
+								<p>Disclaimer</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidebar -->
+
+		
+		<div class="main-panel">
+			<div class="content">
+				<div class="page-inner">
+					<div class="page-header">
+						<h4 class="page-title">Species detection</h4>
+						<ul class="breadcrumbs">
+							<li class="nav-home">
+								<a href="#">
+									<i class="flaticon-home"></i>
+								</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="#">Home</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="#">Species detection</a>
+							</li>
+						</ul>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-title">Species detection</div>
+									<div class="card-category">
+										Software version: 1.0.0 (2023-03) <br>
+										Database version: December, 2016 (https://github.com/BenLangmead/aws-indexes/blob/master/docs/centrifuge.md) <br><br>
+										
+										<!--需要在这里加入测试数据例子的链接
+										<a class="link" href="#">Test sequence</a>-->
+										<a href="/test_sequence" style="color: blue;font-size:14px">Example sequence format </a>
+
+										<br><br>
+										Please make sure you fill in the correct email address,<br>
+										the software will take some time to run, we will send the result file to your email.
+										<br><br>
+										The data type should be:<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;Metagenomic next-generation sequencing Third generation sequencing(TGS)<br>
+										
+										<br>
+										Please upload fq file which removed human reads, thanks<br>
+										
+										<br><br>
+										The following command are used to detect species<br>
+										centrifuge -p 8 --met 5 --time --ignore-quals<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;-S sample_name_result.tsv --report-file sample_name_filtlong_report.tsv<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;-x centrifuge_database -U sample_name.fq.gz
+										
+									</div>
+								</div>
+								
+								<div class="card-body"  style="padding-bottom: 4rem;">
+									<!--<a>Select database </a>-->
+									<div class="form">
+
+
+										<div class="form-group form-show-notify col">
+											<div class="col text-left">
+												<label>Whether to join us :<br></label>
+											</div>
+											<div class="col-lg-4 col-md-9 col-sm-8">
+												<select class="form-control  input-fixed" id="save_data">
+													<option value="yes">Save data</option>
+													<option value="no">Don't save data</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group form-floating-label input-fixed col" id="country_div" style="margin-left:18px">
+
+											<label>Select your country :<br></label>
+
+											<select class="selectpicker countrypicker" data-live-search="true" data-default="null" id="country">
+												<!--<option value="null">null</option>-->
+											</select> <!--data-flag="true"-->
+										</div>
+
+
+										<div class="form-group form-floating-label input-fixed col" id="email_div" style="margin-left:18px">
+
+											<input id="email_text" type="text" class="form-control input-border-bottom" required="">
+
+											<label for="email_text" class="placeholder">Email</label>
+										</div>
+
+
+										
+										<div class="form-group" style="margin-left:18px">
+											<!--<div class="input-group">-->	
+											<div>
+													<!--<input type="text" class="form-control" aria-label="Text input with dropdown button">
+													Choose File(s)   title="Choose file"  accept="*.*" -->
+													<p>
+													Choose file:
+														<input type="file" id="file" multiple="multiple"/>
+														{% csrf_token %}
+														<!--<button type="button"  id="btn-upload">Upload</button>-->
+													</p>
+
+													<p>
+    													<button type="submit" class="btn btn-primary"  onclick="upload();">
+															Submit
+														</button>
+
+														<div id='progress1' style="height:20px;width:100px;border:2px solid gray;float:left;margin-right:10px;">
+   															<div id='progress2' style="height:100%;width:0px;background:gray;"></div>
+
+
+														<b style="margin-right:20px" id='progress3'>0%</b><!-- /.box-body -->
+														<br/>
+														</div>
+													<!-- ??</p>-->
+
+													<!--
+													<div class="input-group-append">
+														<button class="btn btn-default btn-border" type="button">Choose file</button>
+													</div>
+													-->
+											</div>
+											<!--<script src="/statics/assets/js/upload.js"></script>-->
+											
+										</div>
+										
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.pkuph.cn/">
+									pkuph
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.pku.edu.cn/">
+									pku
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.bjmu.edu.cn/">
+									bjmu
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.wanghuilab.net">
+									huilab
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="copyright ml-auto">
+						Copyright 2023 Huilab, Department of Clinical Laboratory<br>Peking University People's Hospital, Beijing, China.
+						<br>
+						<!--<i class="fa fa-heart heart text-danger"></i>
+						by <a href="https://www.wanghuilab.net"> Huilab </a>-->
+					</div>		
+				</div>
+			</footer>
+		</div>
+
+		
+	</div>
+	
+	<!--   Core JS Files   -->
+	<script src="/statics/assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="/statics/assets/js/core/popper.min.js"></script>
+	<script src="/statics/assets/js/core/bootstrap.min.js"></script>
+
+	<!-- jQuery UI -->
+	<script src="/statics/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="/statics/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	
+	<!-- jQuery Scrollbar -->
+	<script src="/statics/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<!-- Atlantis JS -->
+	<script src="/statics/assets/js/atlantis.min.js"></script>
+	<script src="/statics/assets/js/plugin/sweetalert/sweetalert.min.js"></script>  <!-- 用弹窗就要有这个 -->
+	<script src="/statics/assets/js/countrypicker.js"></script>  <!-- 用就要有这个 -->
+	<script src="/statics/assets/js/bootstrap-select.min.js"></script>
+
+	<script type="text/javascript" >
+        function on_progress(evt)
+        {
+			if(evt.lengthComputable)
+			{
+				var ele = document.getElementById('progress2');
+				var percent = Math.round((evt.loaded) * 100 / evt.total);
+				ele.style.width = percent + '%';
+				document.getElementById('progress3').innerHTML = percent + '%';
+			}
+		}
+		function upload() {
+			var xhr = new XMLHttpRequest();
+			var file = document.getElementById('file').files;
+            console.log(file);
+            console.log(file.length)
+            console.log($("#file")[0])
+            console.log($("#file")[0].files)
+            console.log($("#file")[0].files[0])
+
+			var form = new FormData();
+			if (file.length == 0)
+            {
+            	swal("No file!", "No file!", "error")
+            	console.log('Please upload a file')
+            	return;
+            }
+
+			if (file.length > 1)
+            {
+            	swal("Number error!", "Number error!", "error")
+            	console.log('Please upload one file')
+            	return;
+            }
+
+			for (var i = 0; i < file.length; i++)
+			{
+                form.append('file', ($("#file")[0].files[i]));
+            }
+            //form.append('file',file);
+
+            console.log(form.get("file"))
+
+			var country_type=document.getElementById("country");
+			var index=country_type.selectedIndex
+			var country_value=country_type.options[index].value
+			form.append('country_value', country_value);
+			console.log(country_value)
+
+			var save_data=document.getElementById("save_data");
+			var index=save_data.selectedIndex
+			var save_data_value=save_data.options[index].value
+			form.append('save_data_value', save_data_value);
+			console.log(save_data_value)
+
+			var email_value = $("#email_text").val()
+			form.append('email', email_value);
+			console.log(email_value)
+
+            if (save_data_value =='yes' && country_value == 'null')
+            {
+        		swal("No country value", "No country value", "error")
+        		console.log('Please select your country.')
+        		return;
+			}
+
+			xhr.upload.addEventListener('progress',on_progress,false);
+			xhr.open('POST','/post_species/',true);
+            xhr.setRequestHeader('X-CSRFTOKEN','{{ request.COOKIES.csrftoken }}');   //Django CSRF
+			xhr.send(form);   //发送表单
+
+			console.log("READYSTATE "+ xhr.status, xhr.readyState)
+
+            xhr.onreadystatechange = () => {
+            if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304)
+            {
+                if (xhr.response != 'Wrong_file_name' && xhr.response != 'No_file'&& xhr.readyState == 4){
+                    console.log('in this if');
+					//console.log(xhr.readyState);
+		            //window.location = '/species_waiting_page/'
+					var filename = xhr.response
+					window.location.href='/species_waiting_page/'+filename+'/'
+	            }
+				else
+				{
+					swal("Wrong_file_name!", "Wrong_file_name!", "error")
+				}
+            }
+            else
+            {
+                console.log("wrong condition");
+            }
+        };
+
+		}
+
+	</script>
+
+</body>
+</html>

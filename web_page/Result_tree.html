@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>PathoTracker huilab</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="/statics/assets/img/pku.jpg" type="image/x-icon"/>
+	
+	<!-- Fonts and icons -->
+	<script src="/statics/assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Lato:300,400,700,900"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/statics/assets/css/fonts.min.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="/statics/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/statics/assets/css/atlantis.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<!-- Logo Header -->
+			<div class="logo-header" data-background-color="blue">
+				
+				<!--  -->
+				<!-- href="index.html" ->改为 href="#"  -->
+				<a href="#" class="logo">
+					<img src="/statics/assets/img/beidarenmin.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
+					<img src="/statics/assets/img/pku.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+				</button>
+				<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+				<div class="nav-toggle">
+					<button class="btn btn-toggle toggle-sidebar">
+						<i class="icon-menu"></i>
+					</button>
+				</div>
+			</div>
+			<!-- End Logo Header -->
+
+			<!-- Navbar Header -->
+			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+				
+				<div class="container-fluid">
+					<span class="text-white fw-bold col-xl-4 ml-auto mr-auto" style="font-size:20px">PathoTracker</span>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+		</div>
+
+		<!-- Sidebar -->
+		<div class="sidebar sidebar-style-2">			
+			<div class="sidebar-wrapper scrollbar scrollbar-inner">
+				<div class="sidebar-content">				
+					<ul class="nav nav-primary">
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Components</h4>
+						</li>
+						<li class="nav-item">
+							<a href="/index/">
+								<i class="fas fa-desktop"></i>
+								<p>Home</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/Tutorial/">
+								<i class="fas fa-th-list"></i>
+								<p>Tutorial</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/PathoTracker/">
+								<i class="fas fa-pen-square"></i>
+								<p>PathoTracker</p>
+							</a>
+						</li>
+						
+						<li class="nav-item">
+							<a href="/PathoTracker_ST11/">
+								<i class="fas fa-pen-square"></i>
+								<p>PathoTracker (ST11)</p>
+							</a>
+							
+						</li>
+
+						<li class="nav-item">
+							<a href="/species/">
+								<i class="fas fa-chart-bar"></i>
+								<p>Species detection</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="/phylogenetic_tree/">
+								<i class="fas fa-tree"></i>
+								<p>Phylogenetic tree</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="/CRE_network/">
+								<i class="fas fa-table"></i>
+								<p>CRE network</p>
+							</a>
+						</li>
+						
+						<li class="nav-item">
+							<a href="/About_Contact/">
+								<i class="fab fa-telegram"></i>
+								<p>About & Contact</p>
+							</a>
+						</li>
+						
+						<li class="nav-item">
+							<a href="/Disclaimer/">
+								<i class="fas fa-bars"></i>
+								<p>Disclaimer</p>
+							</a>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidebar -->
+
+		
+		<div class="main-panel">
+			<div class="content">
+				<div class="page-inner">
+					<div class="page-header">
+						<h4 class="page-title">Phylogenetic tree generator</h4>
+						<ul class="breadcrumbs">
+							<li class="nav-home">
+								<a href="#">
+									<i class="flaticon-home"></i>
+								</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="#">Home</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="#">Phylogenetic tree generator</a>
+							</li>
+						</ul>
+					</div>
+					<div class="row">
+						<div class="col">
+
+							<div class="card">
+								<div class="card-header">
+									<h4 class="card-title">Tree file</h4>
+								</div>
+								<div class="card-body">
+									<!--<h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Tree file</h4>
+
+										这里填充树的下载链接-->
+										<a href="/tree_result_download/{{ pathname }}" style="color: blue;font-size:16px">Download treefile</a>
+
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header">
+									<h4 class="card-title">Tree plot</h4>
+								</div>
+								<div class="card-body">
+									<!--<h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Tree plot</h4>
+										这里填充树的图像-->
+										<!--{{ graph }}--> <img src="data:image/jpg;base64,{{ graph }}" >
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+
+	<footer class="footer">
+		<div class="container-fluid">
+			<nav class="pull-left">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.pkuph.cn/">
+							pkuph
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.pku.edu.cn/">
+							pku
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.bjmu.edu.cn/">
+							bjmu
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.wanghuilab.net">
+							huilab
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="copyright ml-auto">
+				Copyright 2023 Huilab, Department of Clinical Laboratory<br>Peking University People's Hospital, Beijing, China.
+				<br>
+						<!--<i class="fa fa-heart heart text-danger"></i>
+						by <a href="https://www.wanghuilab.net"> Huilab </a>-->
+			</div>	
+		</div>
+	</footer>
+	</div>
+
+</div>
+		
+
+	
+	<!--   Core JS Files   -->
+	<script src="/statics/assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="/statics/assets/js/core/popper.min.js"></script>
+	<script src="/statics/assets/js/core/bootstrap.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="/statics/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="/statics/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	
+	<!-- jQuery Scrollbar -->
+	<script src="/statics/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<!-- Atlantis JS -->
+	<script src="/statics/assets/js/atlantis.min.js"></script>
+
+	<script type="text/javascript">
+		var pathname = "{{pathname}}"
+		//console.log(pathname)
+		//console.log("111")
+	</script>
+
+</body>
+</html>

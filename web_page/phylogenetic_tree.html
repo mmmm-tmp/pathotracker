@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>PathoTracker huilab</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="/statics/assets/img/pku.jpg" type="image/x-icon"/>
+	
+	<!-- Fonts and icons -->
+	<script src="/statics/assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Lato:300,400,700,900"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/statics/assets/css/fonts.min.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="/statics/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/statics/assets/css/atlantis.min.css">
+	<link rel="stylesheet" href="/statics/assets/css/bootstrap-select.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<!-- Logo Header -->
+			<div class="logo-header" data-background-color="blue">
+				
+				<!-- 注意下面是点击这个图片跳转到index.html，我没有改这一步 -->
+				<!-- href="index.html" ->改为 href="#"  -->
+				<a href="#" class="logo">
+					<img src="/statics/assets/img/beidarenmin.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
+					<img src="/statics/assets/img/pku.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+				</button>
+				<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+				<div class="nav-toggle">
+					<button class="btn btn-toggle toggle-sidebar">
+						<i class="icon-menu"></i>
+					</button>
+				</div>
+			</div>
+			<!-- End Logo Header -->
+
+			<!-- Navbar Header -->
+			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+				
+				<div class="container-fluid">
+					<div class="collapse" id="search-nav">
+						<form class="navbar-left navbar-form nav-search mr-md-3">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button type="submit" class="btn btn-search pr-1">
+										<i class="fa fa-search search-icon"></i>
+									</button>
+								</div>
+								<input type="text" placeholder="Search ..." class="form-control">
+							</div>
+						</form>
+					</div>
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+					</ul>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+		</div>
+
+		<!-- Sidebar -->
+		<div class="sidebar sidebar-style-2">			
+			<div class="sidebar-wrapper scrollbar scrollbar-inner">
+				<div class="sidebar-content">
+					<ul class="nav nav-primary">
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Components</h4>
+						</li>
+						<li class="nav-item">
+							<a href="/index/">
+								<i class="fas fa-desktop"></i>
+								<p>Home</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/Tutorial/"> 
+								<i class="fas fa-th-list"></i>
+								<p>Tutorial</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/PathoTracker/">
+								<i class="fas fa-pen-square"></i>
+								<p>PathoTracker</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="/PathoTracker_ST11/">
+								<i class="fas fa-pen-square"></i>
+								<p>PathoTracker (ST11)</p>
+							</a>
+							
+						</li>
+
+						<li class="nav-item">
+							<a href="/species/">
+								<i class="fas fa-chart-bar"></i>
+								<p>Species detection</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="/phylogenetic_tree/">
+								<i class="fas fa-tree"></i>
+								<p>Phylogenetic tree</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="/CRE_network/">
+								<i class="fas fa-table"></i>
+								<p>CRE network</p>
+							</a>
+						</li>
+
+						
+						<li class="nav-item">
+							<a href="/About_Contact/">
+								<i class="fab fa-telegram"></i>
+								<p>About & Contact</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/Disclaimer/">
+								<i class="fas fa-bars"></i>
+								<p>Disclaimer</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidebar -->
+
+		
+		<div class="main-panel">
+			<div class="content">
+				<div class="page-inner">
+					<div class="page-header">
+						<h4 class="page-title">Phylogenetic tree</h4>
+						<ul class="breadcrumbs">
+							<li class="nav-home">
+								<a href="#">
+									<i class="flaticon-home"></i>
+								</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="#">Home</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="#">Phylogenetic tree</a>
+							</li>
+						</ul>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-title">Phylogenetic tree</div>
+									<div class="card-category">
+										<!--Software version: 2.0.1 (2022-07-28) <br>
+										Database version: (2022-07-28)<br>-->
+										
+										<!--需要在这里加入测试数据例子的链接 -->
+										<a href="/test_sequence" style="color: blue;font-size:14px">Example sequence format </a>
+
+										<br><br>
+										Please make sure you fill in the correct email address,<br>
+										the software will take some time to run, we will send the result file to your email.
+										<br><br>
+										The following command are used to build tree<br>
+										prokka --mincontiglen 100 --prefix sample_name sample_name.fasta --force<br>										
+										roary -e -s --mafft -p 4  *.gff -f treename -v<br>
+										iqtree2 -m MFP -B 1000 --bnni -T AUTO<br><br>
+										
+										Please note that do not upload plasmid sequences, as plasmid sequences often fail to build phylogenetic trees by the core-genome.
+									</div>
+								</div>
+								
+								<div class="card-body" style="padding-bottom: 4rem;">
+									<!--<a>Select database </a> <option value="2">2</option>-->
+
+
+										<div class="form-group form-show-notify col">
+											<div class="col text-left">
+												<label>Select the number of sequences you will upload :<br></label>
+											</div>
+											<div class="col">
+												<select class="form-control" id="number_of_sequences">
+													<!--<option value="3">3</option>--><option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option><!--<option value="7">7</option>
+													<option value="8">8</option><option value="9">9</option><option value="10">10</option>-->
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group form-floating-label input-fixed col" id="email_div" style="margin-left:18px">
+
+											<input id="email_text" type="text" class="form-control input-border-bottom" required="">
+
+											<label for="email_text" class="placeholder">Email</label>
+										</div>
+
+
+										<div class="form-group" style="margin-left:18px">
+											<!--<div class="input-group">-->	
+											<div>
+													<!--<input type="text" class="form-control" aria-label="Text input with dropdown button">
+													Choose File(s)   title="Choose file"  accept="*.*" -->
+													<p>
+													Choose file:
+														<input type="file" id="file" multiple="multiple"/>
+														{% csrf_token %}
+														<!--<button type="button"  id="btn-upload">Upload</button>-->
+													</p>
+
+													<p>
+    													<button type="submit" class="btn btn-primary"  onclick="upload();">
+															Submit
+														</button>
+
+														<div id='progress1' style="height:20px;width:100px;border:2px solid gray;float:left;margin-right:10px;">
+   															<div id='progress2' style="height:100%;width:0px;background:gray;"></div>
+
+
+														<b style="margin-right:20px" id='progress3'>0%</b><!-- /.box-body -->
+														<br/>
+														</div>
+													<!-- ??</p>-->
+
+													<!--
+													<div class="input-group-append">
+														<button class="btn btn-default btn-border" type="button">Choose file</button>
+													</div>
+													-->
+											</div>
+											<!--本地的pycharm找不到它，是不是因为本地的路径不一样-->
+											<!--<script src="../statics/assets/js/upload.js"></script>-->
+											<!--下面是在服务器上的-->
+											<!--<script src="/statics/assets/js/upload.js"></script>-->
+										</div>
+										
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+			</div>
+			<footer class="footer">
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.pkuph.cn/">
+									pkuph
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.pku.edu.cn/">
+									pku
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.bjmu.edu.cn/">
+									bjmu
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.wanghuilab.net">
+									huilab
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="copyright ml-auto">
+						Copyright 2023 Huilab, Department of Clinical Laboratory<br>Peking University People's Hospital, Beijing, China.
+						<br>
+						<!--<i class="fa fa-heart heart text-danger"></i>
+						by <a href="https://www.wanghuilab.net"> Huilab </a>-->
+					</div>				
+				</div>
+			</footer>
+		</div>
+	</div>
+	
+	<!--   Core JS Files   -->
+	<script src="/statics/assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="/statics/assets/js/core/popper.min.js"></script>
+	<script src="/statics/assets/js/core/bootstrap.min.js"></script>
+
+	<!-- jQuery UI -->
+	<script src="/statics/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="/statics/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	
+	<!-- jQuery Scrollbar -->
+	<script src="/statics/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<!-- Atlantis JS -->
+	<script src="/statics/assets/js/atlantis.min.js"></script>
+	<script src="/statics/assets/js/plugin/sweetalert/sweetalert.min.js"></script>  <!-- 用弹窗就要有这个 -->
+	<script src="/statics/assets/js/countrypicker.js"></script>  <!-- 用就要有这个 -->
+	<script src="/statics/assets/js/bootstrap-select.min.js"></script>
+
+	<script type="text/javascript" >
+        function on_progress(evt)
+        {
+			if(evt.lengthComputable)
+			{
+				var ele = document.getElementById('progress2');
+				var percent = Math.round((evt.loaded) * 100 / evt.total);
+				ele.style.width = percent + '%';
+				document.getElementById('progress3').innerHTML = percent + '%';
+			}
+		}
+		function upload() {
+			var xhr = new XMLHttpRequest();
+			var file = document.getElementById('file').files;
+            console.log(file);
+            console.log(file.length)
+            console.log($("#file")[0])
+            console.log($("#file")[0].files)
+            console.log($("#file")[0].files[0])
+
+			//
+			var number_of_sequences=document.getElementById("number_of_sequences");
+			var index=number_of_sequences.selectedIndex
+			var number_of_sequences_value=number_of_sequences.options[index].value
+
+			console.log(file.length)
+
+			if (file.length == 0)
+            {
+            	swal("No file!", "No file!", "error")
+            	console.log('no file')
+            	return;
+            }
+
+			//把下面这个改成 判断文件的数量和number_of_sequences_value是否一样，若不一样则error
+            if (file.length != number_of_sequences_value)
+            {
+        		swal("The number of file is incorrect!", "The number is incorrect!", "error")
+        		console.log('The number of file is incorrect')
+        		return;
+			}
+
+			var form = new FormData();
+			for (var i = 0; i < file.length; i++)
+			{
+                form.append('file', ($("#file")[0].files[i]));
+            }
+            //form.append('file',file);
+
+            console.log(form.get("file"))
+
+			// 把序列数量添加进表单的后半段
+			form.append('number_of_sequences', number_of_sequences_value);
+			console.log(number_of_sequences_value)
+
+			//发送表单
+            //console.log("1测试加载状态READYSTATE "+ xhr.status, xhr.readyState)
+
+			var email_value = $("#email_text").val()
+			form.append('email', email_value);
+			console.log(email_value)
+
+			xhr.upload.addEventListener('progress',on_progress,false);
+			xhr.open('POST','/upload_tree/',true);
+            xhr.setRequestHeader('X-CSRFTOKEN','{{ request.COOKIES.csrftoken }}');   //Django CSRF
+			xhr.send(form);   //发送表单
+
+			console.log("READYSTATE "+ xhr.status, xhr.readyState)
+
+            xhr.onreadystatechange = () => {
+            if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304)
+            {
+                console.log(xhr.readyState);
+				if (xhr.response != 'Wrong_file_name' && xhr.response != 'No_file' && xhr.readyState == 4){
+                    console.log('in this if');
+					var pathname = xhr.response
+					window.location.href='/tree_waiting_page/'+pathname+'/'
+	            }
+				else if (xhr.readyState != 2 && xhr.readyState != 3)
+				{
+					console.log(xhr.readyState);
+					swal("Wrong_file_name!", "Wrong_file_name!", "error")
+				}
+            }
+            else
+            {
+                
+				console.log("wrong condition");
+            }
+        };
+
+		}
+
+	</script>
+
+</body>
+</html>
