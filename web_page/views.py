@@ -92,7 +92,7 @@ def result(request, filename):
     except OSError:
         print('no species content')
     
-    file = open("../../result/"+filename + "/"+ filename +"-select-db-isolate-average-3_1101.txt", 'r')
+    file = open("../../result/"+filename + "/"+ filename +"-select-db-isolate-average.txt", 'r')
     #message = file.readlines()
     message = file.read()
     #print(message)
@@ -169,7 +169,7 @@ def waiting(request):
     if os.path.exists("../../result/"+filename + "/"+ filename +"-something-wrong.txt") == True:
         return HttpResponse("something_wrong") 
     
-    if os.path.exists("../../result/"+filename + "/"+ filename +"-select-db-isolate-average-3_1101.txt") == False:  #
+    if os.path.exists("../../result/"+filename + "/"+ filename +"-select-db-isolate-average.txt") == False:  #
         sleep(300) #sleep 5 min 
         return HttpResponse("Not over")  #
     else:
