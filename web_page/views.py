@@ -169,9 +169,9 @@ def waiting(request):
     if os.path.exists("../../result/"+filename + "/"+ filename +"-something-wrong.txt") == True:
         return HttpResponse("something_wrong") 
     
-    if os.path.exists("../../result/"+filename + "/"+ filename +"-select-db-isolate-average-3_1101.txt") == False:  #这个while确保了返回值一直是None
+    if os.path.exists("../../result/"+filename + "/"+ filename +"-select-db-isolate-average-3_1101.txt") == False:  #
         sleep(300) #sleep 5 min 
-        return HttpResponse("Not over")  #应该加一个三天
+        return HttpResponse("Not over")  #
     else:
         #print("over!")
         return HttpResponse("over")
@@ -191,24 +191,24 @@ def handle_uploaded_file(f_obj,i,save_data_value,country_value, email_value,
     if reads_type_value == 0:
         writefilename = filename + '.fasta'
     elif reads_type_value == 1 and sample_type_value == 2:
-        writefilename = filename + '.r' + str(i) +'.fq.gz'  #双端
+        writefilename = filename + '.r' + str(i) +'.fq.gz'  #
     else:
         writefilename = filename + '.fq.gz'
     #print("writefilename",writefilename)
     destination = open("../../upload/"+ writefilename, 'wb+') #
-    for chunk in f_obj.chunks():  # 分块写入文件
+    for chunk in f_obj.chunks():  # 
         destination.write(chunk)
     destination.close()
 
     destination = open("../../database_upload/"+ writefilename, 'wb+')
-    for chunk in f_obj.chunks():  # 分块写入文件
+    for chunk in f_obj.chunks():  # 
         destination.write(chunk)
     destination.close()
     if save_data_value == 'yes':
         save_data_value_tmp = 1
     else:
         save_data_value_tmp = 0
-    #由于城市之类的中间有空格，所以
+    #
     subprocess.getoutput("echo \"%s;%s;%s;%s;%s;%s;\" >> ../../database_upload/list_upload_info.txt" % 
                 (writefilename,save_data_value_tmp,reads_type_value,country_value, email_value)) #%s;%s;%s;  
     
@@ -401,7 +401,7 @@ def tree_waiting(request):
 def running_tree(pathname,checknamevalue):
     #print('running tree')
     
-    process_result1 = subprocess.getoutput("sh ../../pipline_tree/pipline-tree-1.sh %s" % (pathname))  #所以这个不加后面的是对的
+    process_result1 = subprocess.getoutput("sh ../../pipline_tree/pipline-tree-1.sh %s" % (pathname))  #
     process_result1 = process_result1.lower()
     process_result2 = subprocess.getoutput("sh ../../pipline_tree/pipline-tree-2.sh %s" % (pathname))
     process_result2 = process_result2.lower()
@@ -443,7 +443,7 @@ def handle_uploaded_file_tree(f_obj,pathname):
     if not isExists:
         os.makedirs("../../phylogenetic_tree_upload/"+pathname)
     destination = open(os.path.join("../../phylogenetic_tree_upload/"+pathname+'/', name), 'wb+')
-    for chunk in f_obj.chunks():  # 分块写入文件
+    for chunk in f_obj.chunks():  #
         destination.write(chunk)
     destination.close()
     
@@ -573,16 +573,14 @@ def handle_uploaded_file_species(f_obj,save_data_value,country_value,email_value
     #print(name1[0])
     
     filename = filename + "_"+ str(random.randint(1,10))
-    
-    #之后要取消注释
     writefilename = filename + '.fq.gz'
     destination = open("../../upload/" + writefilename, 'wb+') 
-    for chunk in f_obj.chunks():  # 分块写入文件
+    for chunk in f_obj.chunks():  # 
         destination.write(chunk)
     destination.close()
 
     destination = open("../../upload/" + writefilename, 'wb+')
-    for chunk in f_obj.chunks():  # 分块写入文件
+    for chunk in f_obj.chunks():  # 
         destination.write(chunk)
     destination.close()
     
@@ -590,9 +588,7 @@ def handle_uploaded_file_species(f_obj,save_data_value,country_value,email_value
         save_data_value_tmp = 1
     else:
         save_data_value_tmp = 0
-    #由于城市之类的中间有空格，所以
-    
-    #之后要取消注释
+    #
     subprocess.getoutput("echo \"%s;%s;%s;%s;%s\" >> ../../database_upload/list_upload_info_species.txt" % (writefilename,save_data_value, country_value, email_value)) 
     
     subprocess.getoutput("mkdir ../../result/%s" % (filename))
@@ -606,7 +602,7 @@ def running_species(filename,checknamevalue):
 
     #print('running')
     
-    #需要取消注释
+    #
     process_result = subprocess.getoutput("sh ../../pipline_sepcies/pipline-species.sh %s" % (filename))
     process_result=process_result.lower()
 
@@ -707,7 +703,7 @@ def running_ST11(filename, identity_virulence, identity_antimicrobial, coverage_
         f.write(process_result)
         f.close()
         
-        # 报错通知
+        # 
         file = open("../../result_ST11/"+filename + "/"+ "email_value.txt", 'r')
         email_value = file.read()
         file.close()
@@ -745,7 +741,7 @@ def waiting_ST11(request):
     
     if os.path.exists("../../result_ST11/"+filename + "/"+ filename +"-select-db-isolate-average-ST11.txt") == False:  #
         sleep(300) #sleep 5 min 
-        return HttpResponse("Not over")  #应该加一个三天
+        return HttpResponse("Not over")  #
     else:
         return HttpResponse("over")
 
@@ -764,19 +760,19 @@ def handle_uploaded_file_ST11(f_obj,i,save_data_value,country_value, email_value
     if reads_type_value == 0:
         writefilename = filename + '.fasta'
     elif reads_type_value == 1 and sample_type_value == 2:
-        writefilename = filename + '.r' + str(i) +'.fq.gz'  #双端
+        writefilename = filename + '.r' + str(i) +'.fq.gz'  #
     else:
         writefilename = filename + '.fq.gz'
     
     #print("writefilename",writefilename)
     
     destination = open("../../upload_ST11/"+ writefilename, 'wb+') #
-    for chunk in f_obj.chunks():  # 分块写入文件
+    for chunk in f_obj.chunks():  #
         destination.write(chunk)
     destination.close()
 
     destination = open("../../database_upload_ST11/"+ writefilename, 'wb+')
-    for chunk in f_obj.chunks():  # 分块写入文件
+    for chunk in f_obj.chunks():  #
         destination.write(chunk)
     destination.close()
     if save_data_value == 'yes':

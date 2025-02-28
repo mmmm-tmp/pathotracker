@@ -29,7 +29,6 @@
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 				
-				<!-- 注意下面是点击这个图片跳转到index.html，我没有改这一步 -->
 				<!-- href="index.html" ->改为 href="#"  -->
 				<a href="#" class="logo">
 					<img src="/statics/assets/img/beidarenmin.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
@@ -319,15 +318,6 @@
 											</select> <!--data-flag="true"-->
 										</div>
 
-										<!-- 先不加了
-										<div class="form-group form-floating-label input-fixed col" id="country_div_input" style="margin-left:18px">
-											<a>If you use edge and want to join us, please write your country here</a>
-											<input id="country_input" type="text" class="form-control input-border-bottom" required="">
-
-											<label for="country_input" class="placeholder">Country</label>
-										</div>
-										-->
-
 										<div class="form-group form-floating-label input-fixed col" id="email_div" style="margin-left:18px">
 
 											<input id="email_text" type="text" class="form-control input-border-bottom" required="">
@@ -343,7 +333,6 @@
 											<div class="col">
 												<select class="form-control" id="reads_type"  style="width:70%">
 													<option value="Assembled or Draft Genome/Contigs">Assembled or Draft Genome/Contigs(fasta)</option>
-													<!--<option value="Raw Sequencing Reads(fastq)">Raw Sequencing Reads(fastq)</option>--> <!--先注释掉-->
 												</select>
 											</div>
 										</div>
@@ -359,7 +348,6 @@
 											<div class="col">
 												<select class="form-control" id="sample_type" style="width:70%">
 													<option value="mNGS_TGS">Metagenomic third-generation sequencing (TGS)</option>
-													<!--<option value="mNGS_NGS">Metagenomic next-generation sequencing (NGS)</option> 没有验证过-->
 													<option value="culture_TGS">Culture isolate (TGS)</option>
 													<option value="culture_NGS">Culture isolate (NGS)</option>
 												</select>
@@ -457,8 +445,8 @@
 	<script src="/statics/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 	<!-- Atlantis JS -->
 	<script src="/statics/assets/js/atlantis.min.js"></script>
-	<script src="/statics/assets/js/plugin/sweetalert/sweetalert.min.js"></script>  <!-- 用弹窗就要有这个 -->
-	<script src="/statics/assets/js/countrypicker.js"></script>  <!-- 用就要有这个 -->
+	<script src="/statics/assets/js/plugin/sweetalert/sweetalert.min.js"></script>  
+	<script src="/statics/assets/js/countrypicker.js"></script> 
 	<script src="/statics/assets/js/bootstrap-select.min.js"></script>
 
 	<script type="text/javascript" >
@@ -559,7 +547,7 @@
         		return;
 			}
 
-			//在这里加上对数据格式的限定
+			//
 			if (file.length > 1 && reads_type == 'Assembled or Draft Genome/Contigs')
             {
         		swal("The number of file is worng", "The number of file is worng", "error")
@@ -588,7 +576,7 @@
             {
                 console.log("return reponse")
 				//console.log(xhr)
-				//console.log(xhr.responseText); //这里面是能获取到的，我该怎么提出来
+				//console.log(xhr.responseText); //
 				//var filename = "{{filename}}";
 				//console.log(filename)
 				//var condition = {{condition}};

@@ -30,7 +30,6 @@
 			<div class="logo-header" data-background-color="blue">
 				
 				<!--  -->
-				<!-- href="index.html" ->改为 href="#"  -->
 				<a href="#" class="logo">
 					<img src="/statics/assets/img/beidarenmin.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
 					<img src="/statics/assets/img/pku.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
@@ -175,8 +174,6 @@
 										Software version: 1.0.0 (2023-03) <br>
 										Database version: December, 2016 (https://github.com/BenLangmead/aws-indexes/blob/master/docs/centrifuge.md) <br><br>
 										
-										<!--需要在这里加入测试数据例子的链接
-										<a class="link" href="#">Test sequence</a>-->
 										<a href="/test_sequence" style="color: blue;font-size:14px">Example sequence format </a>
 
 										<br><br>
@@ -330,8 +327,8 @@
 	<script src="/statics/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 	<!-- Atlantis JS -->
 	<script src="/statics/assets/js/atlantis.min.js"></script>
-	<script src="/statics/assets/js/plugin/sweetalert/sweetalert.min.js"></script>  <!-- 用弹窗就要有这个 -->
-	<script src="/statics/assets/js/countrypicker.js"></script>  <!-- 用就要有这个 -->
+	<script src="/statics/assets/js/plugin/sweetalert/sweetalert.min.js"></script> 
+	<script src="/statics/assets/js/countrypicker.js"></script> 
 	<script src="/statics/assets/js/bootstrap-select.min.js"></script>
 
 	<script type="text/javascript" >
@@ -403,7 +400,7 @@
 			xhr.upload.addEventListener('progress',on_progress,false);
 			xhr.open('POST','/post_species/',true);
             xhr.setRequestHeader('X-CSRFTOKEN','{{ request.COOKIES.csrftoken }}');   //Django CSRF
-			xhr.send(form);   //发送表单
+			xhr.send(form);   //
 
 			console.log("READYSTATE "+ xhr.status, xhr.readyState)
 
