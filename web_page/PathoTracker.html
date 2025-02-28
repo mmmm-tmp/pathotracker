@@ -29,7 +29,7 @@
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 				
-				<!-- href="index.html" ->改为 href="#"  -->
+
 				<a href="#" class="logo">
 					<img src="/statics/assets/img/beidarenmin.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
 					<img src="/statics/assets/img/pku.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
@@ -172,8 +172,7 @@
 										Software version: 1.0.0 (2023-03) <br>
 										Database version: (2022-07-28)<br><br>
 										
-										<!--需要在这里加入测试数据例子的链接
-										<a class="link" href="#">Test sequence</a>-->
+
 										<a href="/test_sequence" style="color: blue;font-size:14px">Example sequence format </a>
 
 										<br><br>
@@ -565,7 +564,7 @@
 			xhr.upload.addEventListener('progress',on_progress,false);
 			xhr.open('POST','/upload/',true);
             xhr.setRequestHeader('X-CSRFTOKEN','{{ request.COOKIES.csrftoken }}');   //Django CSRF
-			xhr.send(form);   //发送表单
+			xhr.send(form);   //
 
 			console.log("5READYSTATE "+ xhr.status, xhr.readyState)
 			

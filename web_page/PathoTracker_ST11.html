@@ -29,7 +29,6 @@
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 				
-				<!-- href="index.html" ->改为 href="#"  -->
 				<a href="#" class="logo">
 					<img src="/statics/assets/img/beidarenmin.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
 					<img src="/statics/assets/img/pku.jpg" alt="navbar brand" class="navbar-brand" width="40" height="40">
@@ -480,7 +479,7 @@
 
             console.log(form.get("file"))
 
-			//下拉框
+			//
 			var identity_virulence=document.getElementById("identity_virulence");
 			var index=identity_virulence.selectedIndex;
 			var identity_virulence_value=identity_virulence.options[index].value
@@ -567,7 +566,7 @@
 			xhr.upload.addEventListener('progress',on_progress,false);
 			xhr.open('POST','/upload_ST11/',true);
             xhr.setRequestHeader('X-CSRFTOKEN','{{ request.COOKIES.csrftoken }}');   //Django CSRF
-			xhr.send(form);   //发送表单
+			xhr.send(form);   //
 
 			console.log("5READYSTATE "+ xhr.status, xhr.readyState)
 			
